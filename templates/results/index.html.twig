@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SearchController!{% endblock %}
+
+{% block body %}
+
+<h1>Information entreprise</h1>
+
+<ul>
+
+    <li>Siren : {{results.siren}} </li>
+    <li>Nom_complet : {{results.nom_complet}} </li>
+    <li>Nom_raison_sociale : {{results.nom_raison_sociale}} </li>
+    <li>Activite_principale : {{results.siege.activite_principale}} </li>
+    <li>Date_creation : {{results.date_creation}} </li>
+    <li>Adress : {{results.siege.adresse}} </li>
+    <li>categorie_entreprise : {{results.categorie_entreprise}} </li>
+   
+</ul>
+<ul>
+    <a href="{{path('download_id',{'id' : results.siren})}}"><button>Download</button></a>
+    <a href="{{path('redirect_urssaf')}}"><button>Calcule salaire</button></a>
+    <a href="{{path('compagny_search')}}"><button>Retour</button></a>
+</ul>
+
+
+
+{% endblock %}
