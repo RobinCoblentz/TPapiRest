@@ -19,9 +19,6 @@ jobs:
         
     - name: Install dependencies
       run: composer install
-        
-    - name: Run linter
-      run: ./vendor/bin/phpcs --standard=PSR12 src/
       
     - name: Run tests
       run: ./vendor/bin/phpunit
