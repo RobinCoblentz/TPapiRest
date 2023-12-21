@@ -21,9 +21,9 @@ jobs:
         docker push cicd_cours_nsrc:${{ github.ref_name }}
 
     - name: Log in to Docker Hub
-      uses: docker/login-action@v1
+      uses: docker/login-action@v2
       with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        username: robincz69
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Create GitHub Release
